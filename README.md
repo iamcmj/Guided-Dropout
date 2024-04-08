@@ -39,7 +39,7 @@ python fisher_matrix_gpt2.py -seed 1 --training_set_pct 50
 python fisher_matrix_t5.py -seed 42 --training_set_pct 100
 python fisher_matrix_t5.py -seed 1 --training_set_pct 50
 ```
-The python scripts will build the required subdirectories current the current directory for you.
+The python scripts will build the required subdirectories under the current directory for you.
 
 The notebooks 'Fisher Visualizations.ipynb' and 'Fisher Visualizations (Normalized).ipynb' will help you visualize various model based on the Fisher scores that you have computed.
 
