@@ -66,3 +66,47 @@ The notebook 'Loss Landscape Visualization.ipynb' will help you visualize the 3D
 ## Evaluating Guided-Dropout and Baselines on GLUE tasks
 
 > **Note:** A [source installation](https://huggingface.co/transformers/v2.9.1/examples.html) of Huggingface transformers is required for running GLUE evaluations.
+
+There glue_bert_{model}.py scripts evaluate both our model and the baselines of the glue tasks. The scripts take 4 arguments, the GLUE task, the output directory with the evaluation metrics and models are saved, the training seed, and finally the training set percentage. If the output directory does not exist, the script will create the directory for you. Finally, the GLUE task argument can take values in {cola, mnli, mrpc, qnli, qqp, rte, sst2, stsb, wnli}. 
+
+Thus, running the evaluation script is as simple as:
+
+```
+python glue_bert_ours.py --task cola --output_dir ./CoLA -seed 42 --training_set_pct 100
+python glue_bert_ours.py --task mnli --output_dir ./MNLI -seed 42 --training_set_pct 100
+python glue_bert_ours.py --task mrpc --output_dir ./MRPC -seed 42 --training_set_pct 100
+python glue_bert_ours.py --task qnli --output_dir ./QNLI -seed 42 --training_set_pct 100
+python glue_bert_ours.py --task qqp --output_dir ./QQP -seed 42 --training_set_pct 100
+python glue_bert_ours.py --task rte --output_dir ./RTE -seed 42 --training_set_pct 100
+python glue_bert_ours.py --task sst2 --output_dir ./SST2 -seed 42 --training_set_pct 100
+python glue_bert_ours.py --task stsb --output_dir ./STSB -seed 42 --training_set_pct 100
+python glue_bert_ours.py --task wnli --output_dir ./WNLI -seed 42 --training_set_pct 100
+```
+
+```
+python glue_bert_dropout.py --task cola --output_dir ./CoLA -seed 42 --training_set_pct 100
+python glue_bert_dropout.py --task mnli --output_dir ./MNLI -seed 42 --training_set_pct 100
+python glue_bert_dropout.py --task mrpc --output_dir ./MRPC -seed 42 --training_set_pct 100
+python glue_bert_dropout.py --task qnli --output_dir ./QNLI -seed 42 --training_set_pct 100
+python glue_bert_dropout.py --task qqp --output_dir ./QQP -seed 42 --training_set_pct 100
+python glue_bert_dropout.py --task rte --output_dir ./RTE -seed 42 --training_set_pct 100
+python glue_bert_dropout.py --task sst2 --output_dir ./SST2 -seed 42 --training_set_pct 100
+python glue_bert_dropout.py --task stsb --output_dir ./STSB -seed 42 --training_set_pct 100
+python glue_bert_dropout.py --task wnli --output_dir ./WNLI -seed 42 --training_set_pct 100
+```
+
+```
+python glue_bert_gaussian.py --task cola --output_dir ./CoLA -seed 42 --training_set_pct 100
+python glue_bert_gaussian.py --task mnli --output_dir ./MNLI -seed 42 --training_set_pct 100
+python glue_bert_gaussian.py --task mrpc --output_dir ./MRPC -seed 42 --training_set_pct 100
+python glue_bert_gaussian.py --task qnli --output_dir ./QNLI -seed 42 --training_set_pct 100
+python glue_bert_gaussian.py --task qqp --output_dir ./QQP -seed 42 --training_set_pct 100
+python glue_bert_gaussian.py --task rte --output_dir ./RTE -seed 42 --training_set_pct 100
+python glue_bert_gaussian.py --task sst2 --output_dir ./SST2 -seed 42 --training_set_pct 100
+python glue_bert_gaussian.py --task stsb --output_dir ./STSB -seed 42 --training_set_pct 100
+python glue_bert_gaussian.py --task wnli --output_dir ./WNLI -seed 42 --training_set_pct 100
+```
+
+## Thanks
+
+If our research aids yours, please do not forget to cite us! :)
