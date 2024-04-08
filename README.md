@@ -51,7 +51,7 @@ As showcased in Figure 1 of the paper, the perturbation is done either to:
 - the top 50% of the parameters with the highest Fisher scores (--perturbation top)
 - the bottom 50% of the parameters with the lowest Fisher scores (--perturbation bottom)
 
-If you so choose to, you can compute the surf files representing the 3D loss landscape of base BERT based on any configuration of the 3 arguments. As examples:
+If you so choose to, you can compute the surf files representing the 3D loss landscape of base BERT based on any configuration of the 3 arguments. For example:
 
 ```
 python loss_visualization_bert.py -seed 42 --training_set_pct 100 --perturbation top
